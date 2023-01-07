@@ -1,0 +1,1 @@
+/usr/bin/cc   -Wall -Werror -D_POSIX_C_SOURCE=2   CMakeFiles/huffcode.dir/huffcode.c.o  -o huffcode  libhuffman.a 

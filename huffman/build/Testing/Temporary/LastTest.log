@@ -1,0 +1,549 @@
+Start testing: Dec 20 19:38 CST
+----------------------------------------------------------
+1/2 Testing: check
+1/2 Test: check
+Command: "/home/cindy0727/projects/huffman/huffman/run_tests.sh" "--huffcode" "/home/cindy0727/projects/huffman/huffman/build/huffcode"
+Directory: /home/cindy0727/projects/huffman/huffman
+"check" start time: Dec 20 19:38 CST
+Output:
+----------------------------------------------------------
+Basic Checks...
+compress_test test_data/3_line
+compress_test test_data/empty
+compress_test test_data/1_byte
+compress_test test_data/2_byte_2_symbol
+compress_test test_data/2_byte_1_symbol
+compress_test test_data/3_byte_1_symbol
+compress_test test_data/3_byte_3_symbol
+compress_test test_data/128_byte_1_symbol
+compress_test test_data/128_byte_2_symbol
+Issue 2 Regression Checks...
+decompress_test test_data/reported_issues/issue2/id:000000,sig:11,src:000000,op:flip1,pos:0
+decompress_test test_data/reported_issues/issue2/id:000001,sig:11,src:000000,op:flip1,pos:3
+decompress_test test_data/reported_issues/issue2/id:000002,sig:11,src:000000,op:flip1,pos:3
+decompress_test test_data/reported_issues/issue2/id:000003,sig:11,src:000000,op:flip1,pos:9
+decompress_test test_data/reported_issues/issue2/id:000004,sig:11,src:000000,op:flip1,pos:9
+decompress_test test_data/reported_issues/issue2/id:000005,sig:11,src:000000,op:flip1,pos:21
+decompress_test test_data/reported_issues/issue2/id:000006,sig:11,src:000000,op:flip1,pos:39
+decompress_test test_data/reported_issues/issue2/id:000007,sig:11,src:000000,op:flip1,pos:133
+decompress_test test_data/reported_issues/issue2/id:000008,sig:11,src:000000,op:flip2,pos:9
+decompress_test test_data/reported_issues/issue2/id:000009,sig:11,src:000000,op:flip4,pos:106
+decompress_test test_data/reported_issues/issue2/id:000010,sig:11,src:000000,op:arith8,pos:9,val:-10
+decompress_test test_data/reported_issues/issue2/id:000011,sig:11,src:000000,op:arith8,pos:27,val:+15
+decompress_test test_data/reported_issues/issue2/id:000012,sig:11,src:000000,op:arith8,pos:35,val:+29
+decompress_test test_data/reported_issues/issue2/id:000013,sig:11,src:000000,op:arith8,pos:136,val:-9
+decompress_test test_data/reported_issues/issue2/id:000014,sig:11,src:000000,op:int8,pos:3,val:+0
+All Tests Passed
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"check" end time: Dec 20 19:38 CST
+"check" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/2 Testing: valgrind_check
+2/2 Test: valgrind_check
+Command: "/home/cindy0727/projects/huffman/huffman/run_tests.sh" "--huffcode" "/home/cindy0727/projects/huffman/huffman/build/huffcode" "--use-valgrind"
+Directory: /home/cindy0727/projects/huffman/huffman
+"valgrind_check" start time: Dec 20 19:38 CST
+Output:
+----------------------------------------------------------
+Basic Checks...
+compress_test test_data/3_line
+==1806== Memcheck, a memory error detector
+==1806== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1806== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1806== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -i test_data/3_line -o /tmp/huffman.7Jub88B05v/3_line.compressed
+==1806== 
+==1806== 
+==1806== HEAP SUMMARY:
+==1806==     in use at exit: 0 bytes in 0 blocks
+==1806==   total heap usage: 50 allocs, 50 frees, 14,074 bytes allocated
+==1806== 
+==1806== All heap blocks were freed -- no leaks are possible
+==1806== 
+==1806== For lists of detected and suppressed errors, rerun with: -s
+==1806== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==1807== Memcheck, a memory error detector
+==1807== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1807== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1807== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -d -i /tmp/huffman.7Jub88B05v/3_line.compressed -o /tmp/huffman.7Jub88B05v/3_line.decompressed
+==1807== 
+==1807== 
+==1807== HEAP SUMMARY:
+==1807==     in use at exit: 0 bytes in 0 blocks
+==1807==   total heap usage: 30 allocs, 30 frees, 9,825 bytes allocated
+==1807== 
+==1807== All heap blocks were freed -- no leaks are possible
+==1807== 
+==1807== For lists of detected and suppressed errors, rerun with: -s
+==1807== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+compress_test test_data/empty
+==1810== Memcheck, a memory error detector
+==1810== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1810== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1810== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -i test_data/empty -o /tmp/huffman.7Jub88B05v/empty.compressed
+==1810== 
+==1810== 
+==1810== HEAP SUMMARY:
+==1810==     in use at exit: 0 bytes in 0 blocks
+==1810==   total heap usage: 6 allocs, 6 frees, 13,232 bytes allocated
+==1810== 
+==1810== All heap blocks were freed -- no leaks are possible
+==1810== 
+==1810== For lists of detected and suppressed errors, rerun with: -s
+==1810== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==1827== Memcheck, a memory error detector
+==1827== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1827== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1827== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -d -i /tmp/huffman.7Jub88B05v/empty.compressed -o /tmp/huffman.7Jub88B05v/empty.decompressed
+==1827== 
+==1827== 
+==1827== HEAP SUMMARY:
+==1827==     in use at exit: 0 bytes in 0 blocks
+==1827==   total heap usage: 3 allocs, 3 frees, 5,040 bytes allocated
+==1827== 
+==1827== All heap blocks were freed -- no leaks are possible
+==1827== 
+==1827== For lists of detected and suppressed errors, rerun with: -s
+==1827== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+compress_test test_data/1_byte
+==1830== Memcheck, a memory error detector
+==1830== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1830== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1830== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -i test_data/1_byte -o /tmp/huffman.7Jub88B05v/1_byte.compressed
+==1830== 
+==1830== 
+==1830== HEAP SUMMARY:
+==1830==     in use at exit: 0 bytes in 0 blocks
+==1830==   total heap usage: 8 allocs, 8 frees, 13,288 bytes allocated
+==1830== 
+==1830== All heap blocks were freed -- no leaks are possible
+==1830== 
+==1830== For lists of detected and suppressed errors, rerun with: -s
+==1830== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==1839== Memcheck, a memory error detector
+==1839== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1839== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1839== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -d -i /tmp/huffman.7Jub88B05v/1_byte.compressed -o /tmp/huffman.7Jub88B05v/1_byte.decompressed
+==1839== 
+==1839== 
+==1839== HEAP SUMMARY:
+==1839==     in use at exit: 0 bytes in 0 blocks
+==1839==   total heap usage: 5 allocs, 5 frees, 9,176 bytes allocated
+==1839== 
+==1839== All heap blocks were freed -- no leaks are possible
+==1839== 
+==1839== For lists of detected and suppressed errors, rerun with: -s
+==1839== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+compress_test test_data/2_byte_2_symbol
+==1842== Memcheck, a memory error detector
+==1842== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1842== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1842== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -i test_data/2_byte_2_symbol -o /tmp/huffman.7Jub88B05v/2_byte_2_symbol.compressed
+==1842== 
+==1842== 
+==1842== HEAP SUMMARY:
+==1842==     in use at exit: 0 bytes in 0 blocks
+==1842==   total heap usage: 15 allocs, 15 frees, 13,388 bytes allocated
+==1842== 
+==1842== All heap blocks were freed -- no leaks are possible
+==1842== 
+==1842== For lists of detected and suppressed errors, rerun with: -s
+==1842== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==1843== Memcheck, a memory error detector
+==1843== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1843== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1843== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -d -i /tmp/huffman.7Jub88B05v/2_byte_2_symbol.compressed -o /tmp/huffman.7Jub88B05v/2_byte_2_symbol.decompressed
+==1843== 
+==1843== 
+==1843== HEAP SUMMARY:
+==1843==     in use at exit: 0 bytes in 0 blocks
+==1843==   total heap usage: 9 allocs, 9 frees, 9,258 bytes allocated
+==1843== 
+==1843== All heap blocks were freed -- no leaks are possible
+==1843== 
+==1843== For lists of detected and suppressed errors, rerun with: -s
+==1843== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+compress_test test_data/2_byte_1_symbol
+==1846== Memcheck, a memory error detector
+==1846== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1846== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1846== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -i test_data/2_byte_1_symbol -o /tmp/huffman.7Jub88B05v/2_byte_1_symbol.compressed
+==1846== 
+==1846== 
+==1846== HEAP SUMMARY:
+==1846==     in use at exit: 0 bytes in 0 blocks
+==1846==   total heap usage: 8 allocs, 8 frees, 13,288 bytes allocated
+==1846== 
+==1846== All heap blocks were freed -- no leaks are possible
+==1846== 
+==1846== For lists of detected and suppressed errors, rerun with: -s
+==1846== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==1847== Memcheck, a memory error detector
+==1847== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1847== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1847== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -d -i /tmp/huffman.7Jub88B05v/2_byte_1_symbol.compressed -o /tmp/huffman.7Jub88B05v/2_byte_1_symbol.decompressed
+==1847== 
+==1847== 
+==1847== HEAP SUMMARY:
+==1847==     in use at exit: 0 bytes in 0 blocks
+==1847==   total heap usage: 5 allocs, 5 frees, 9,176 bytes allocated
+==1847== 
+==1847== All heap blocks were freed -- no leaks are possible
+==1847== 
+==1847== For lists of detected and suppressed errors, rerun with: -s
+==1847== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+compress_test test_data/3_byte_1_symbol
+==1850== Memcheck, a memory error detector
+==1850== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1850== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1850== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -i test_data/3_byte_1_symbol -o /tmp/huffman.7Jub88B05v/3_byte_1_symbol.compressed
+==1850== 
+==1850== 
+==1850== HEAP SUMMARY:
+==1850==     in use at exit: 0 bytes in 0 blocks
+==1850==   total heap usage: 8 allocs, 8 frees, 13,288 bytes allocated
+==1850== 
+==1850== All heap blocks were freed -- no leaks are possible
+==1850== 
+==1850== For lists of detected and suppressed errors, rerun with: -s
+==1850== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==1863== Memcheck, a memory error detector
+==1863== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1863== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1863== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -d -i /tmp/huffman.7Jub88B05v/3_byte_1_symbol.compressed -o /tmp/huffman.7Jub88B05v/3_byte_1_symbol.decompressed
+==1863== 
+==1863== 
+==1863== HEAP SUMMARY:
+==1863==     in use at exit: 0 bytes in 0 blocks
+==1863==   total heap usage: 5 allocs, 5 frees, 9,176 bytes allocated
+==1863== 
+==1863== All heap blocks were freed -- no leaks are possible
+==1863== 
+==1863== For lists of detected and suppressed errors, rerun with: -s
+==1863== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+compress_test test_data/3_byte_3_symbol
+==1866== Memcheck, a memory error detector
+==1866== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1866== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1866== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -i test_data/3_byte_3_symbol -o /tmp/huffman.7Jub88B05v/3_byte_3_symbol.compressed
+==1866== 
+==1866== 
+==1866== HEAP SUMMARY:
+==1866==     in use at exit: 0 bytes in 0 blocks
+==1866==   total heap usage: 20 allocs, 20 frees, 13,486 bytes allocated
+==1866== 
+==1866== All heap blocks were freed -- no leaks are possible
+==1866== 
+==1866== For lists of detected and suppressed errors, rerun with: -s
+==1866== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==1867== Memcheck, a memory error detector
+==1867== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1867== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1867== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -d -i /tmp/huffman.7Jub88B05v/3_byte_3_symbol.compressed -o /tmp/huffman.7Jub88B05v/3_byte_3_symbol.decompressed
+==1867== 
+==1867== 
+==1867== HEAP SUMMARY:
+==1867==     in use at exit: 0 bytes in 0 blocks
+==1867==   total heap usage: 12 allocs, 12 frees, 9,339 bytes allocated
+==1867== 
+==1867== All heap blocks were freed -- no leaks are possible
+==1867== 
+==1867== For lists of detected and suppressed errors, rerun with: -s
+==1867== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+compress_test test_data/128_byte_1_symbol
+==1878== Memcheck, a memory error detector
+==1878== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1878== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1878== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -i test_data/128_byte_1_symbol -o /tmp/huffman.7Jub88B05v/128_byte_1_symbol.compressed
+==1878== 
+==1878== 
+==1878== HEAP SUMMARY:
+==1878==     in use at exit: 0 bytes in 0 blocks
+==1878==   total heap usage: 8 allocs, 8 frees, 13,288 bytes allocated
+==1878== 
+==1878== All heap blocks were freed -- no leaks are possible
+==1878== 
+==1878== For lists of detected and suppressed errors, rerun with: -s
+==1878== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==1879== Memcheck, a memory error detector
+==1879== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1879== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1879== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -d -i /tmp/huffman.7Jub88B05v/128_byte_1_symbol.compressed -o /tmp/huffman.7Jub88B05v/128_byte_1_symbol.decompressed
+==1879== 
+==1879== 
+==1879== HEAP SUMMARY:
+==1879==     in use at exit: 0 bytes in 0 blocks
+==1879==   total heap usage: 5 allocs, 5 frees, 9,176 bytes allocated
+==1879== 
+==1879== All heap blocks were freed -- no leaks are possible
+==1879== 
+==1879== For lists of detected and suppressed errors, rerun with: -s
+==1879== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+compress_test test_data/128_byte_2_symbol
+==1882== Memcheck, a memory error detector
+==1882== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1882== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1882== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -i test_data/128_byte_2_symbol -o /tmp/huffman.7Jub88B05v/128_byte_2_symbol.compressed
+==1882== 
+==1882== 
+==1882== HEAP SUMMARY:
+==1882==     in use at exit: 0 bytes in 0 blocks
+==1882==   total heap usage: 15 allocs, 15 frees, 13,388 bytes allocated
+==1882== 
+==1882== All heap blocks were freed -- no leaks are possible
+==1882== 
+==1882== For lists of detected and suppressed errors, rerun with: -s
+==1882== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==1883== Memcheck, a memory error detector
+==1883== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1883== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1883== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -d -i /tmp/huffman.7Jub88B05v/128_byte_2_symbol.compressed -o /tmp/huffman.7Jub88B05v/128_byte_2_symbol.decompressed
+==1883== 
+==1883== 
+==1883== HEAP SUMMARY:
+==1883==     in use at exit: 0 bytes in 0 blocks
+==1883==   total heap usage: 9 allocs, 9 frees, 9,258 bytes allocated
+==1883== 
+==1883== All heap blocks were freed -- no leaks are possible
+==1883== 
+==1883== For lists of detected and suppressed errors, rerun with: -s
+==1883== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+Issue 2 Regression Checks...
+decompress_test test_data/reported_issues/issue2/id:000000,sig:11,src:000000,op:flip1,pos:0
+==1886== Memcheck, a memory error detector
+==1886== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1886== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1886== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -d -i test_data/reported_issues/issue2/id:000000,sig:11,src:000000,op:flip1,pos:0 -o /tmp/huffman.7Jub88B05v/id:000000,sig:11,src:000000,op:flip1,pos:0.decompressed
+==1886== 
+==1886== 
+==1886== HEAP SUMMARY:
+==1886==     in use at exit: 0 bytes in 0 blocks
+==1886==   total heap usage: 3 allocs, 3 frees, 5,040 bytes allocated
+==1886== 
+==1886== All heap blocks were freed -- no leaks are possible
+==1886== 
+==1886== For lists of detected and suppressed errors, rerun with: -s
+==1886== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+decompress_test test_data/reported_issues/issue2/id:000001,sig:11,src:000000,op:flip1,pos:3
+==1888== Memcheck, a memory error detector
+==1888== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1888== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1888== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -d -i test_data/reported_issues/issue2/id:000001,sig:11,src:000000,op:flip1,pos:3 -o /tmp/huffman.7Jub88B05v/id:000001,sig:11,src:000000,op:flip1,pos:3.decompressed
+==1888== 
+==1888== 
+==1888== HEAP SUMMARY:
+==1888==     in use at exit: 0 bytes in 0 blocks
+==1888==   total heap usage: 39 allocs, 39 frees, 6,212 bytes allocated
+==1888== 
+==1888== All heap blocks were freed -- no leaks are possible
+==1888== 
+==1888== For lists of detected and suppressed errors, rerun with: -s
+==1888== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+decompress_test test_data/reported_issues/issue2/id:000002,sig:11,src:000000,op:flip1,pos:3
+==1890== Memcheck, a memory error detector
+==1890== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1890== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1890== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -d -i test_data/reported_issues/issue2/id:000002,sig:11,src:000000,op:flip1,pos:3 -o /tmp/huffman.7Jub88B05v/id:000002,sig:11,src:000000,op:flip1,pos:3.decompressed
+==1890== 
+==1890== 
+==1890== HEAP SUMMARY:
+==1890==     in use at exit: 0 bytes in 0 blocks
+==1890==   total heap usage: 112 allocs, 112 frees, 12,103 bytes allocated
+==1890== 
+==1890== All heap blocks were freed -- no leaks are possible
+==1890== 
+==1890== For lists of detected and suppressed errors, rerun with: -s
+==1890== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+decompress_test test_data/reported_issues/issue2/id:000003,sig:11,src:000000,op:flip1,pos:9
+==1892== Memcheck, a memory error detector
+==1892== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1892== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1892== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -d -i test_data/reported_issues/issue2/id:000003,sig:11,src:000000,op:flip1,pos:9 -o /tmp/huffman.7Jub88B05v/id:000003,sig:11,src:000000,op:flip1,pos:9.decompressed
+==1892== 
+==1892== 
+==1892== HEAP SUMMARY:
+==1892==     in use at exit: 0 bytes in 0 blocks
+==1892==   total heap usage: 147 allocs, 147 frees, 10,707 bytes allocated
+==1892== 
+==1892== All heap blocks were freed -- no leaks are possible
+==1892== 
+==1892== For lists of detected and suppressed errors, rerun with: -s
+==1892== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+decompress_test test_data/reported_issues/issue2/id:000004,sig:11,src:000000,op:flip1,pos:9
+==1894== Memcheck, a memory error detector
+==1894== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1894== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1894== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -d -i test_data/reported_issues/issue2/id:000004,sig:11,src:000000,op:flip1,pos:9 -o /tmp/huffman.7Jub88B05v/id:000004,sig:11,src:000000,op:flip1,pos:9.decompressed
+==1894== 
+==1894== 
+==1894== HEAP SUMMARY:
+==1894==     in use at exit: 0 bytes in 0 blocks
+==1894==   total heap usage: 323 allocs, 323 frees, 17,618 bytes allocated
+==1894== 
+==1894== All heap blocks were freed -- no leaks are possible
+==1894== 
+==1894== For lists of detected and suppressed errors, rerun with: -s
+==1894== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+decompress_test test_data/reported_issues/issue2/id:000005,sig:11,src:000000,op:flip1,pos:21
+==1896== Memcheck, a memory error detector
+==1896== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1896== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1896== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -d -i test_data/reported_issues/issue2/id:000005,sig:11,src:000000,op:flip1,pos:21 -o /tmp/huffman.7Jub88B05v/id:000005,sig:11,src:000000,op:flip1,pos:21.decompressed
+==1896== 
+==1896== 
+==1896== HEAP SUMMARY:
+==1896==     in use at exit: 0 bytes in 0 blocks
+==1896==   total heap usage: 29 allocs, 29 frees, 5,926 bytes allocated
+==1896== 
+==1896== All heap blocks were freed -- no leaks are possible
+==1896== 
+==1896== For lists of detected and suppressed errors, rerun with: -s
+==1896== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+decompress_test test_data/reported_issues/issue2/id:000006,sig:11,src:000000,op:flip1,pos:39
+==1898== Memcheck, a memory error detector
+==1898== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1898== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1898== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -d -i test_data/reported_issues/issue2/id:000006,sig:11,src:000000,op:flip1,pos:39 -o /tmp/huffman.7Jub88B05v/id:000006,sig:11,src:000000,op:flip1,pos:39.decompressed
+==1898== 
+==1898== 
+==1898== HEAP SUMMARY:
+==1898==     in use at exit: 0 bytes in 0 blocks
+==1898==   total heap usage: 60 allocs, 60 frees, 6,978 bytes allocated
+==1898== 
+==1898== All heap blocks were freed -- no leaks are possible
+==1898== 
+==1898== For lists of detected and suppressed errors, rerun with: -s
+==1898== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+decompress_test test_data/reported_issues/issue2/id:000007,sig:11,src:000000,op:flip1,pos:133
+==1900== Memcheck, a memory error detector
+==1900== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1900== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1900== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -d -i test_data/reported_issues/issue2/id:000007,sig:11,src:000000,op:flip1,pos:133 -o /tmp/huffman.7Jub88B05v/id:000007,sig:11,src:000000,op:flip1,pos:133.decompressed
+==1900== 
+==1900== 
+==1900== HEAP SUMMARY:
+==1900==     in use at exit: 0 bytes in 0 blocks
+==1900==   total heap usage: 133 allocs, 133 frees, 8,773 bytes allocated
+==1900== 
+==1900== All heap blocks were freed -- no leaks are possible
+==1900== 
+==1900== For lists of detected and suppressed errors, rerun with: -s
+==1900== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+decompress_test test_data/reported_issues/issue2/id:000008,sig:11,src:000000,op:flip2,pos:9
+==1902== Memcheck, a memory error detector
+==1902== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1902== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1902== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -d -i test_data/reported_issues/issue2/id:000008,sig:11,src:000000,op:flip2,pos:9 -o /tmp/huffman.7Jub88B05v/id:000008,sig:11,src:000000,op:flip2,pos:9.decompressed
+==1902== 
+==1902== 
+==1902== HEAP SUMMARY:
+==1902==     in use at exit: 0 bytes in 0 blocks
+==1902==   total heap usage: 92 allocs, 92 frees, 8,381 bytes allocated
+==1902== 
+==1902== All heap blocks were freed -- no leaks are possible
+==1902== 
+==1902== For lists of detected and suppressed errors, rerun with: -s
+==1902== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+decompress_test test_data/reported_issues/issue2/id:000009,sig:11,src:000000,op:flip4,pos:106
+==1904== Memcheck, a memory error detector
+==1904== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1904== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1904== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -d -i test_data/reported_issues/issue2/id:000009,sig:11,src:000000,op:flip4,pos:106 -o /tmp/huffman.7Jub88B05v/id:000009,sig:11,src:000000,op:flip4,pos:106.decompressed
+==1904== 
+==1904== 
+==1904== HEAP SUMMARY:
+==1904==     in use at exit: 0 bytes in 0 blocks
+==1904==   total heap usage: 325 allocs, 325 frees, 16,772 bytes allocated
+==1904== 
+==1904== All heap blocks were freed -- no leaks are possible
+==1904== 
+==1904== For lists of detected and suppressed errors, rerun with: -s
+==1904== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+decompress_test test_data/reported_issues/issue2/id:000010,sig:11,src:000000,op:arith8,pos:9,val:-10
+==1906== Memcheck, a memory error detector
+==1906== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1906== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1906== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -d -i test_data/reported_issues/issue2/id:000010,sig:11,src:000000,op:arith8,pos:9,val:-10 -o /tmp/huffman.7Jub88B05v/id:000010,sig:11,src:000000,op:arith8,pos:9,val:-10.decompressed
+==1906== 
+==1906== 
+==1906== HEAP SUMMARY:
+==1906==     in use at exit: 0 bytes in 0 blocks
+==1906==   total heap usage: 7 allocs, 7 frees, 5,125 bytes allocated
+==1906== 
+==1906== All heap blocks were freed -- no leaks are possible
+==1906== 
+==1906== For lists of detected and suppressed errors, rerun with: -s
+==1906== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+decompress_test test_data/reported_issues/issue2/id:000011,sig:11,src:000000,op:arith8,pos:27,val:+15
+==1908== Memcheck, a memory error detector
+==1908== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1908== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1908== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -d -i test_data/reported_issues/issue2/id:000011,sig:11,src:000000,op:arith8,pos:27,val:+15 -o /tmp/huffman.7Jub88B05v/id:000011,sig:11,src:000000,op:arith8,pos:27,val:+15.decompressed
+==1908== 
+==1908== 
+==1908== HEAP SUMMARY:
+==1908==     in use at exit: 0 bytes in 0 blocks
+==1908==   total heap usage: 922 allocs, 922 frees, 41,293 bytes allocated
+==1908== 
+==1908== All heap blocks were freed -- no leaks are possible
+==1908== 
+==1908== For lists of detected and suppressed errors, rerun with: -s
+==1908== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+decompress_test test_data/reported_issues/issue2/id:000012,sig:11,src:000000,op:arith8,pos:35,val:+29
+==1910== Memcheck, a memory error detector
+==1910== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1910== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1910== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -d -i test_data/reported_issues/issue2/id:000012,sig:11,src:000000,op:arith8,pos:35,val:+29 -o /tmp/huffman.7Jub88B05v/id:000012,sig:11,src:000000,op:arith8,pos:35,val:+29.decompressed
+==1910== 
+==1910== 
+==1910== HEAP SUMMARY:
+==1910==     in use at exit: 0 bytes in 0 blocks
+==1910==   total heap usage: 891 allocs, 891 frees, 40,011 bytes allocated
+==1910== 
+==1910== All heap blocks were freed -- no leaks are possible
+==1910== 
+==1910== For lists of detected and suppressed errors, rerun with: -s
+==1910== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+decompress_test test_data/reported_issues/issue2/id:000013,sig:11,src:000000,op:arith8,pos:136,val:-9
+==1912== Memcheck, a memory error detector
+==1912== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1912== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1912== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -d -i test_data/reported_issues/issue2/id:000013,sig:11,src:000000,op:arith8,pos:136,val:-9 -o /tmp/huffman.7Jub88B05v/id:000013,sig:11,src:000000,op:arith8,pos:136,val:-9.decompressed
+==1912== 
+==1912== 
+==1912== HEAP SUMMARY:
+==1912==     in use at exit: 0 bytes in 0 blocks
+==1912==   total heap usage: 119 allocs, 119 frees, 12,228 bytes allocated
+==1912== 
+==1912== All heap blocks were freed -- no leaks are possible
+==1912== 
+==1912== For lists of detected and suppressed errors, rerun with: -s
+==1912== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+decompress_test test_data/reported_issues/issue2/id:000014,sig:11,src:000000,op:int8,pos:3,val:+0
+==1914== Memcheck, a memory error detector
+==1914== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1914== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==1914== Command: /home/cindy0727/projects/huffman/huffman/build/huffcode -d -i test_data/reported_issues/issue2/id:000014,sig:11,src:000000,op:int8,pos:3,val:+0 -o /tmp/huffman.7Jub88B05v/id:000014,sig:11,src:000000,op:int8,pos:3,val:+0.decompressed
+==1914== 
+==1914== 
+==1914== HEAP SUMMARY:
+==1914==     in use at exit: 0 bytes in 0 blocks
+==1914==   total heap usage: 3 allocs, 3 frees, 5,040 bytes allocated
+==1914== 
+==1914== All heap blocks were freed -- no leaks are possible
+==1914== 
+==1914== For lists of detected and suppressed errors, rerun with: -s
+==1914== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+All Tests Passed
+<end of output>
+Test time =  12.29 sec
+----------------------------------------------------------
+Test Passed.
+"valgrind_check" end time: Dec 20 19:38 CST
+"valgrind_check" time elapsed: 00:00:12
+----------------------------------------------------------
+
+End testing: Dec 20 19:38 CST

@@ -1,0 +1,9 @@
+/home/cindy0727/projects/huffman/huffman/build/CMakeFiles/install/strip.dir
+/home/cindy0727/projects/huffman/huffman/build/CMakeFiles/install/local.dir
+/home/cindy0727/projects/huffman/huffman/build/CMakeFiles/edit_cache.dir
+/home/cindy0727/projects/huffman/huffman/build/CMakeFiles/test.dir
+/home/cindy0727/projects/huffman/huffman/build/CMakeFiles/install.dir
+/home/cindy0727/projects/huffman/huffman/build/CMakeFiles/list_install_components.dir
+/home/cindy0727/projects/huffman/huffman/build/CMakeFiles/rebuild_cache.dir
+/home/cindy0727/projects/huffman/huffman/build/CMakeFiles/huffcode.dir
+/home/cindy0727/projects/huffman/huffman/build/CMakeFiles/huffman.dir

@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cindy0727/projects/HW4/arcd/arcd/arcd.h
+
+/home/cindy0727/projects/HW4/arcd/examples/arcd_stream.c
+string.h
+-
+stdio.h
+-
+unistd.h
+-
+../arcd/arcd.h
+/home/cindy0727/projects/HW4/arcd/arcd/arcd.h
+adaptive_model.h
+-
+
+examples/adaptive_model.h
+../arcd/arcd.h
+arcd/arcd.h
+

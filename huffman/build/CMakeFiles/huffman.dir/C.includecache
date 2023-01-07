@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cindy0727/projects/huffman/huffman/huffman.c
+huffman.h
+/home/cindy0727/projects/huffman/huffman/huffman.h
+assert.h
+-
+stdbool.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+malloc.h
+-
+winsock2.h
+-
+netinet/in.h
+-
+
+/home/cindy0727/projects/huffman/huffman/huffman.h
+stdint.h
+-
+stdio.h
+-
+

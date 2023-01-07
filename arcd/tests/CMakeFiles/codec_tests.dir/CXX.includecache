@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cindy0727/projects/HW4/arcd/arcd/arcd.h
+
+/home/cindy0727/projects/HW4/arcd/tests/codec_tests.cpp
+vector
+-
+string
+-
+sstream
+-
+numeric
+-
+../arcd/arcd.h
+/home/cindy0727/projects/HW4/arcd/arcd/arcd.h
+

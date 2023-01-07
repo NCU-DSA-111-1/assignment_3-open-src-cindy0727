@@ -1,0 +1,3 @@
+/home/cindy0727/projects/HW4/arcd/tests/CMakeFiles/edit_cache.dir
+/home/cindy0727/projects/HW4/arcd/tests/CMakeFiles/rebuild_cache.dir
+/home/cindy0727/projects/HW4/arcd/tests/CMakeFiles/codec_tests.dir
