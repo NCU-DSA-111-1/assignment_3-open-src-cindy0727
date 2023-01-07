@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 #ifdef WIN32
 #include <malloc.h>
@@ -30,6 +31,10 @@ static void usage(FILE* out)
 
 int main(int argc, char** argv)
 {
+	//設置開始時間
+	clock_t begin, end;
+	begin = clock();
+
 	char memory = 0;
 	char compress = 1;
 	int opt;
@@ -120,6 +125,12 @@ int main(int argc, char** argv)
 	{
 		fclose(out);
 	}
+
+	//設置結束時間
+	end = clock();
+	//取微秒整數部分
+	int time = difftime(end, begin);
+	printf("\n compress time : %d microsecond\n", time);
 
 	return rc;
 }
