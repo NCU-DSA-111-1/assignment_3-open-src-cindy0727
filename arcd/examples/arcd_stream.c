@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <time.h>
 #include "../arcd/arcd.h"
 #include <adaptive_model.h>
 
@@ -34,6 +35,10 @@ static const arcd_char_t EOS = 1 << (8 * sizeof(symbol_t));
 
 int main(int argc, char *argv[])
 {
+	//設置開始時間
+	clock_t begin, end;
+	begin = clock();
+
 	if (2 != argc)
 	{
 		usage(stderr);
@@ -74,5 +79,12 @@ int main(int argc, char *argv[])
 	adaptive_model_free(&model);
 	fclose(in);
 	fclose(out);
+
+	//設置結束時間
+	end = clock();
+	//取微秒整數部分
+	int time = difftime(end, begin);
+	printf("\n compress time : %d microsecond\n", time);
+	
 	return 0;
 }
